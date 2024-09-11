@@ -1,4 +1,4 @@
 
-```flask --app flaskr run --debug```
+```flask --app app run --debug```
 
-```flask --app flaskr init-db```
+```flask --app app init-db```

@@ -6,22 +6,11 @@
 
 {% block content %}
   <form method="post">
-    <label for="title">Title</label>
+    <label for="title">Image ID</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
 
-    <label for="body">Body</label>
+    <label for="body">Description</label>
     <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
-    
-
-    <label for="cloudmask">Choose a cloudmask:</label>
-    <select name="cloudmask" id="cloudmask">
-      <option value="sen2cor">sen2cor</option>
-      <option value="fmask">fmask</option>
-      <option value="s2cloudless">s2cloudless</option>
-      <option value="kappamask">kappamask</option>
-    </select>
-
-    <br><br>
 
     <input type="submit" value="Save">
 
