@@ -10,7 +10,12 @@
     <input name="title" id="title"
       value="{{ request.form['title'] or post['title'] }}" required>
     <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
+    <label for="body">Select Cloudmask</label>
+    <select name="body" id="body">
+      {% for cm in data %}
+        <option value={{cm}}>{{ cm }}</option>
+      {% endfor %}
+    </select>
     <input type="submit" value="Save">
   </form>
   <hr>

@@ -9,8 +9,12 @@
     <label for="title">Image ID</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
 
-    <label for="body">Description</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+    <label for="body">Select Cloudmask</label>
+    <select name="body" id="body">
+      {% for cm in data %}
+        <option value={{cm}}>{{ cm }}</option>
+      {% endfor %}
+    </select>
 
     <input type="submit" value="Save">
 

@@ -41,7 +41,7 @@ def create():
             db.commit()
             return redirect(url_for('cloudmask.index'))
 
-    return render_template('cloudmask/create.html')
+    return render_template('cloudmask/create.html', data=["sen2cor", "fmask", "s2cloudless"])
 
 def get_post(id, check_author=True):
     post = get_db().execute(
@@ -84,7 +84,7 @@ def update(id):
             db.commit()
             return redirect(url_for('cloudmask.index'))
 
-    return render_template('cloudmask/update.html', post=post)
+    return render_template('cloudmask/update.html', post=post, data=["sen2cor", "fmask", "s2cloudless"])
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
