@@ -112,3 +112,15 @@ input[type=submit] {
     min-width: 10em;
     margin-top: 1rem;
 }
+.download {
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+.download:hover {
+    opacity: 0.8;
+}
