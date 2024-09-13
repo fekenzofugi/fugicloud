@@ -30,9 +30,6 @@ def create():
         file = request.files['img']
         img = file.filename
 
-        with open(img, "x") as f:
-            f.write("")
-
         file.save(f"app/static/uploads/{img}")
 
         file.close()
