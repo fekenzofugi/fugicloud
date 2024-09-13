@@ -124,3 +124,14 @@ input[type=submit] {
 .download:hover {
     opacity: 0.8;
 }
+
+.img-home {
+    max-width: 10rem;
+}
+
+.return {
+    color: #377ba8;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 1rem;
+}

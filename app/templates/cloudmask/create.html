@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     <label for="title">Image ID</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
 
@@ -13,7 +13,7 @@
     <input id="img" name="img" type="file"  onchange="readURL(this)"
       accept="image/bmp, image/jpg, image/jpeg, image/png, image/tif, image/tiff, application/pdf, .tif" multiple/>
     <a id="link" download></a>
-    <img id="blah" src="#" alt="your image" />
+    <img id="blah" src="#" alt="" />
 
     <label for="body">Select Cloudmask</label>
     <select name="body" id="body">
@@ -25,5 +25,4 @@
     <input type="submit" value="Save">
 
   </form>
-  <script src="../../static/download.js"></script>
 {% endblock %}

@@ -4,8 +4,11 @@
 <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<script src="../static/readfile.js" ></script>
+<script src="../static/scripts/readfile.js" ></script>
+<script src="../../static/scripts/return.js"></script>
+
 <nav>
+  <button class="return" onclick="goBack()">Go Back</button>
   <h1>fugimask</h1>
   <ul>
     {% if g.user %}

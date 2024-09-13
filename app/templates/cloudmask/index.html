@@ -20,10 +20,10 @@
         {% endif %}
       </header>
       <h5>File:</h5>
-      <p class="body">{{ post['img'] }}</p>    
+      <p class="body">{{ post['img'] }}</p>
+      <img src="{{ url_for('static', filename='uploads/' + post['img']) }}" class="img-home">
       <h5>Cloud Mask:</h5> 
       <p class="body">{{ post['body'] }}</p>
-
       <a href="../../static/uploads/{{ post['img'] }}" class="download"  download>
           download processed image
       </a>
